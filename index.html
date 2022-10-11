@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Weather Forecast by SR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="p">
+        <div class="box">
+            <h4><i id="arrowback" class="fad fa-arrow-left"></i> Weather App by SR</h4>
+            <hr>
+            <div class="partone">
+                <p class="info"></p>
+                <div class="firstline">
+                    <input type="text" name="" id="citybox" placeholder="Enter City Name" spellcheck="false" required>
+                    <a href="#"><i id="loc" class="fad fa-location"></i></a>
+                </div>
+                <!-- <input type="text" name="" id="countrybox" placeholder="Enter Country Code" spellcheck="false" required> -->
+                <button type="submit" id="search">Search</button>
+
+            </div>
+            <div class="parttwo">
+                <h3 id="locate"><i class="fad fa-map-marker-alt"></i>
+                    <font id="city">Kolkata, India</font>
+                </h3>
+                <img id="weatherimg" src="./weather-app-icons/clear.svg" alt="">
+                <h1 id="temp">13</h1>
+                <h3 id="weathertype">Sunny</h3>
+                <div class="minmax">
+                    <div class="min">
+                        <i class="fad fa-thermometer-full"></i>
+                        <p>Maximum <br>
+                            <font id="maxtemp">32</font>
+                        </p>
+                    </div>
+                    <div class="max">
+                        <i class="fad fa-thermometer-empty"></i>
+                        <p>Minimum <br>
+                            <font id="mintemp">32</font>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/e6e5ed6bdd.js" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
