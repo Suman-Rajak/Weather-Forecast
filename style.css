@@ -49,6 +49,8 @@ body {
 #arrowback{
     display: none;
     cursor: pointer;
+    font-size: 1.3rem;
+
 }
 
 .box {
@@ -88,6 +90,7 @@ input {
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: .3rem;
     color: white;
+    font-weight: bold;
 }
 
 input:is(:focus, :valid)
@@ -126,10 +129,6 @@ input:is(:focus, :valid)
     color: white;
 }
 
-#arrow{
-    font-size: 1rem;
-    color: #fff;
-}
 
 h4 {
     align-self: flex-start;
@@ -152,6 +151,7 @@ hr {
     cursor: pointer;
     border-radius: .3rem;
     transition: all .4s ease;
+    border: 1px solid white;
 }
 
 #search:hover{

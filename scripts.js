@@ -21,6 +21,13 @@ let loc = document.getElementById('loc');
 let apiloc;
 // const countrybox = document.querySelector('#countrybox');
 
+//Musics
+
+let clearmusic = new Audio('./weather-musics/clear.mp3');
+let windmusic = new Audio('./weather-musics/wind.mp3');
+let thundermusic = new Audio('./weather-musics/thunder.mp3');
+let rainmusic = new Audio('./weather-musics/rain.mp3')
+
 //What will happen when I click on the Search Button
 
 function clickevent() {
@@ -120,37 +127,43 @@ function showreport(weather) {
                 document.body.style.backgroundImage = "url('./weather-animations/clear.gif')";
                 document.body.style.backgroundSize = "cover";
 
-                weatherimage.src="./weather-app-icons/clear.svg"
+                weatherimage.src="./weather-app-icons/clear.svg";
+                clearmusic.play();
             }
             else if (weathertype.textContent == 'Mist' || weathertype.textContent == 'Haze') {
                 document.body.style.backgroundImage = "url('./weather-animations/HazeMist.gif')";
                 document.body.style.backgroundSize = "cover";
 
-                weatherimage.src="./weather-app-icons/haze.svg"
+                weatherimage.src="./weather-app-icons/haze.svg";
+                clearmusic.play();
             }
             else if (weathertype.textContent == 'Rain') {
                 document.body.style.backgroundImage = "url('./weather-animations/thunder.gif')";
                 document.body.style.backgroundSize = "cover";
 
                 weatherimage.src="./weather-app-icons/rain.svg"
+                rainmusic.play();
             }
             else if (weathertype.textContent == 'Thunderstorm') {
                 document.body.style.backgroundImage = "url('./weather-animations/thunder.gif')";
                 document.body.style.backgroundSize = "cover";
 
                 weatherimage.src="./weather-app-icons/storm.svg";
+                thundermusic.play();
             }
             else if (weathertype.textContent == 'Clouds'){
                 document.body.style.backgroundImage = "url('./weather-animations/clouds.gif')";
                 document.body.style.backgroundSize = "cover";
 
                 weatherimage.src="./weather-app-icons/cloud.svg";
+                windmusic.play();
             }
             else if (weathertype.textContent == 'Snow'){
                 document.body.style.backgroundImage = "url('./weather-animations/snowfall.gif')";
                 document.body.style.backgroundSize = "cover";
 
-                weatherimage.src="./weather-app-icons/snow.svg"
+                weatherimage.src="./weather-app-icons/snow.svg";
+                windmusic.play();
             }
 
         }, 1500);
@@ -169,6 +182,14 @@ arrowback.addEventListener('click', () => {
     document.body.style.backgroundImage = "linear-gradient(to top, #48c6ef 0%, #6f86d6 100%)";
     info.style.display = "none";
     info.className = "info";
+
+    //Pausing musics
+
+    thundermusic.pause();
+    clearmusic.pause();
+    rainmusic.pause();
+    windmusic.pause();
+
 })
 
 
