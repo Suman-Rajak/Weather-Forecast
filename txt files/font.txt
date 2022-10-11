@@ -1,0 +1,4 @@
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+
+
+fontawesome 5.15.4 pro icons for free
