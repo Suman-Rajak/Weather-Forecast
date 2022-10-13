@@ -19,6 +19,7 @@ const arrowback = document.getElementById('arrowback');
 let info = document.querySelector('.info');
 let loc = document.getElementById('loc');
 let apiloc;
+let volume = document.getElementById('volume');
 // const countrybox = document.querySelector('#countrybox');
 
 //Musics
@@ -26,7 +27,11 @@ let apiloc;
 let clearmusic = new Audio('./weather-musics/clear.mp3');
 let windmusic = new Audio('./weather-musics/wind.mp3');
 let thundermusic = new Audio('./weather-musics/thunder.mp3');
-let rainmusic = new Audio('./weather-musics/rain.mp3')
+let rainmusic = new Audio('./weather-musics/rain.mp3');
+clearmusic.volume = 0.7;
+rainmusic.volume = 0.7;
+thundermusic.volume = 0.7;
+windmusic.volume=0.7;
 
 //What will happen when I click on the Search Button
 
@@ -175,6 +180,16 @@ function showreport(weather) {
     }
 }
 
+//Speech Button
+
+volume.addEventListener("click", () => {
+    utterance = new SpeechSynthesisUtterance(`Current Weather at ${city.innerText.slice(0,-2)} is ${weathertype.innerText} and current temparature is ${temp.innerText}`);
+
+    // the speechSynthesisutterance is a web speech api that represents a speech request
+    speechSynthesis.speak(utterance); // speak method of speechSynthesis speaks the utterance // Slicing to remove the ",IN" part from voice.
+});
+
+
 arrowback.addEventListener('click', () => {
     parttwo.style.display = "none";
     partone.style.display = "flex";
@@ -189,6 +204,9 @@ arrowback.addEventListener('click', () => {
     clearmusic.pause();
     rainmusic.pause();
     windmusic.pause();
+
+    //Pausing Speech
+    speechSynthesis.cancel();
 
 })
 
