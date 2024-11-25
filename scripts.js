@@ -183,7 +183,7 @@ function showreport(weather) {
 //Speech Button
 
 volume.addEventListener("click", () => {
-    utterance = new SpeechSynthesisUtterance(`Current Weather at ${city.innerText.slice(0,-2)} is ${weathertype.innerText} and current temparature is ${temp.innerText}`);
+    utterance = new SpeechSynthesisUtterance(`Current Weather at ${city.innerText.slice(0,-2)} is ${weathertype.innerText}. And current temparature is ${temp.innerText}`);
 
     // the speechSynthesisutterance is a web speech api that represents a speech request
     speechSynthesis.speak(utterance); // speak method of speechSynthesis speaks the utterance // Slicing to remove the ",IN" part from voice.
